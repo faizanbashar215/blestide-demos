@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madhuban Sweets &amp; Bakery - Pure ghee mithai, fresh bakes and namkeen since 1985.</title>
+<meta name="description" content="Madhuban Sweets &amp; Bakery on Gandhi Maidan Road serves pure ghee sweets, cakes, cookies and namkeen loved by Patna families for four decades.">
+<meta name="theme-color" content="#8C3F1E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Madhuban Sweets &amp; Bakery">
+<meta property="og:description" content="Madhuban Sweets &amp; Bakery on Gandhi Maidan Road serves pure ghee sweets, cakes, cookies and namkeen loved by Patna families for four decades.">
+<meta property="og:image" content="./assets/logo.png">
+<link rel="icon" href="./assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#8C3F1E;
+  --accent-dark:color-mix(in srgb, var(--accent) 80%, #000);
+  --accent-soft:color-mix(in srgb, var(--accent) 10%, #fff);
+  --ink:#171310;--muted:#6f665d;--bg:#fffdf9;--card:#fff;--line:#eee5d8;--gold:#c99a3a;
+  --gold-soft:#f7edd8;
+  --font:'Inter',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;
+  --radius:18px;--shadow:0 14px 40px rgba(23,19,16,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--accent);color:#fff}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:#efe9df}
+::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--accent) 65%,#fff);border-radius:8px;border:2px solid #efe9df}
+.container{max-width:1120px;margin:0 auto;padding:0 22px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
+.btn-accent{background:var(--accent);color:#fff;box-shadow:0 10px 26px color-mix(in srgb, var(--accent) 32%, transparent)}
+.btn-accent::after{content:"";position:absolute;top:0;left:-90%;width:55%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-22deg);transition:left .55s}
+.btn-accent:hover::after{left:140%}
+.btn-accent:hover{transform:translateY(-3px);box-shadow:0 16px 34px color-mix(in srgb, var(--accent) 45%, transparent)}
+.btn-ghost{background:rgba(255,255,255,.6);color:var(--accent);border:1.5px solid color-mix(in srgb,var(--accent) 55%,#fff);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:var(--accent-soft);transform:translateY(-3px)}
+.btn-wa{background:#1fa855;color:#fff;box-shadow:0 10px 26px rgba(31,168,85,.35)}
+.btn-wa:hover{background:#178f47;transform:translateY(-3px)}
+
+header.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,253,249,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:background .35s,border-color .35s,box-shadow .35s}
+header.nav.scrolled{background:rgba(23,19,16,.94);border-color:rgba(255,255,255,.08);box-shadow:0 12px 34px rgba(0,0,0,.3)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;position:relative}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:19px;letter-spacing:-.3px;transition:color .3s}
+.brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex-shrink:0;box-shadow:0 8px 18px color-mix(in srgb,var(--accent) 35%,transparent)}
+.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:var(--muted);transition:color .3s}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);transition:.3s;border-radius:2px}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a:hover::after{width:100%}
+header.nav.scrolled .brand{color:#fff}
+header.nav.scrolled .nav-links{color:#cfc7bd}
+header.nav.scrolled .nav-links a:hover{color:#f3d594}
+header.nav.scrolled .nav-links a::after{background:#f3d594}
+.nav-cta{display:flex;gap:10px}
+header.nav.scrolled .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.06)}
+header.nav.scrolled .btn-ghost:hover{background:rgba(255,255,255,.14)}
+.burger{display:none;background:none;border:0;font-size:25px;cursor:pointer;color:var(--ink);transition:color .3s}
+header.nav.scrolled .burger{color:#fff}
+
+.hero{position:relative;overflow:hidden;padding:168px 0 118px;min-height:88vh;display:flex;align-items:center;background:
+  radial-gradient(900px 480px at 88% -12%, var(--accent-soft), transparent 62%),
+  radial-gradient(760px 520px at -12% 112%, color-mix(in srgb,var(--gold) 14%,#fff), transparent 62%),
+  var(--bg)}
+.hero::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;top:-130px;right:8%;background:color-mix(in srgb,var(--accent) 30%,#fff);filter:blur(90px);opacity:.5;animation:bob 11s ease-in-out infinite}
+.hero::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;bottom:-90px;left:-70px;background:color-mix(in srgb,var(--gold) 45%,#fff);filter:blur(80px);opacity:.55;animation:bob 9s ease-in-out infinite reverse}
+.hero .container{position:relative;z-index:1;width:100%}
+.hero-in{position:relative;max-width:720px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent);background:rgba(255,255,255,.75);border:1px solid color-mix(in srgb,var(--accent) 25%,#fff);padding:9px 18px;border-radius:999px;margin-bottom:24px;backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(23,19,16,.06)}
+.hero h1{font-family:var(--serif);font-size:clamp(36px,5.6vw,62px);line-height:1.08;letter-spacing:-1.2px;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--accent);position:relative;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M3 10 C 50 2, 150 2, 197 8' stroke='%23c99a3a' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") bottom left/100% 10px no-repeat;padding-bottom:12px}
+.hero p.lead{font-size:18.5px;color:var(--muted);max-width:620px;margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:46px}
+.hero-meta .hm{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--muted);background:rgba(255,255,255,.8);border:1px solid var(--line);padding:10px 16px;border-radius:999px;backdrop-filter:blur(6px);box-shadow:0 6px 16px rgba(23,19,16,.05)}
+.hero-meta .hm b{color:var(--ink);font-size:14.5px}
+.stars{color:var(--gold);letter-spacing:2px;font-size:14px}
+.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;width:26px;height:42px;border:2px solid color-mix(in srgb,var(--accent) 45%,#fff);border-radius:14px;display:flex;justify-content:center;padding-top:7px}
+.scroll-cue::after{content:"";width:4px;height:9px;border-radius:3px;background:var(--accent);animation:cue 1.6s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(12px);opacity:.3}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
+
+.hero-collage{display:none}
+@media(min-width:921px){
+  .hero-in{max-width:56%}
+  .hero-collage{display:block;position:absolute;right:0;top:50%;transform:translateY(-50%);width:40%;max-width:440px;height:440px}
+}
+.hc-card{position:absolute;width:66%;aspect-ratio:4/3;border-radius:20px;overflow:hidden;border:6px solid #fff;box-shadow:0 28px 60px rgba(23,19,16,.28);animation:bob 8s ease-in-out infinite;background:linear-gradient(140deg,var(--accent-soft),#fff)}
+.hc-card img{width:100%;height:100%;object-fit:cover}
+.hc-emoji{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:64px;background:linear-gradient(140deg,var(--accent-soft),color-mix(in srgb,var(--gold) 12%,#fff))}
+.hc-0{top:0;left:0;transform:rotate(-4deg);z-index:1}
+.hc-1{top:24%;right:-2%;transform:rotate(5deg);animation-delay:-2.6s;z-index:3}
+.hc-2{bottom:-2%;left:14%;transform:rotate(-1.5deg);animation-delay:-5.2s;z-index:2}
+.hc-badge{position:absolute;right:-4%;top:-16px;z-index:4;background:#171310;color:#f3d594;font-weight:800;font-size:14px;padding:12px 18px;border-radius:16px;box-shadow:0 16px 34px rgba(0,0,0,.35);display:flex;align-items:center;gap:8px;transform:rotate(3deg)}
+.hc-badge .stars{color:#f3d594}
+
+.ticker{background:linear-gradient(90deg,#171310,#241d18);color:#efe4d4;overflow:hidden;padding:14px 0;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.ticker-track{display:flex;width:max-content;animation:tick 34s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track .tk{display:flex;align-items:center;gap:34px;padding:0 17px;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+.ticker-track .tk::after{content:"\2726";color:var(--gold);font-size:12px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+.stats{background:linear-gradient(180deg,#1e1814,#171310);color:#fff;padding:58px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat .num{font-family:var(--serif);font-size:clamp(30px,4vw,46px);font-weight:700;color:#f3d594;line-height:1.05}
+.stat .lab{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:#a89f95;margin-top:9px;font-weight:600}
+.stat{position:relative;padding:6px 8px}
+.stat:not(:last-child)::after{content:"";position:absolute;right:-10px;top:15%;height:70%;width:1px;background:rgba(255,255,255,.1)}
+
+section{padding:84px 0;position:relative}
+.sec-alt{background:#fff}
+.sec-alt::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 50% -80px,var(--accent-soft),transparent 70%);pointer-events:none}
+.sec-head{text-align:center;max-width:660px;margin:0 auto 52px;position:relative}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-family:var(--serif);font-size:clamp(28px,3.8vw,42px);letter-spacing:-.6px;margin-bottom:12px}
+.sec-head p{color:var(--muted);font-size:16.5px}
+
+.grid{display:grid;gap:24px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.3s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 5%,#fff),transparent 50%);opacity:0;transition:.3s;pointer-events:none}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:color-mix(in srgb, var(--accent) 35%, var(--line))}
+.card:hover::before{opacity:1}
+.card .ic{width:52px;height:52px;border-radius:15px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-size:23px;margin-bottom:18px;box-shadow:0 10px 22px color-mix(in srgb,var(--accent) 30%,transparent);position:relative}
+.card h3{font-size:18px;margin-bottom:8px;position:relative}
+.card p{color:var(--muted);font-size:14.8px;position:relative}
+.card .price{display:inline-block;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-dark));font-size:15.5px;margin-top:14px;padding:7px 16px;border-radius:999px;position:relative;box-shadow:0 8px 18px color-mix(in srgb,var(--accent) 28%,transparent)}
+
+.menu-list{display:grid;gap:14px}
+.menu-item{display:flex;align-items:baseline;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px 22px;transition:.25s;position:relative;overflow:hidden}
+.menu-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent),var(--gold));transform:scaleY(0);transition:.3s;transform-origin:top}
+.menu-item:hover{transform:translateX(6px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}
+.menu-item:hover::before{transform:scaleY(1)}
+.menu-item .mi-name{font-weight:700;font-size:16px}
+.menu-item .mi-desc{color:var(--muted);font-size:13.6px;flex:1}
+.menu-item .mi-dots{flex:1;border-bottom:2px dotted var(--line);margin:0 4px;min-width:24px;transform:translateY(-4px)}
+.menu-item .mi-price{font-weight:800;color:#fff;background:var(--accent-soft);color:var(--accent);padding:6px 15px;border-radius:999px;white-space:nowrap;border:1px solid color-mix(in srgb,var(--accent) 25%,#fff)}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery .g-item{border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,var(--accent-soft),#fff);display:flex;align-items:center;justify-content:center;font-size:54px;border:1px solid var(--line);cursor:zoom-in;position:relative;transition:.3s}
+.gallery .g-item::after{content:"\2316";position:absolute;right:12px;bottom:10px;width:36px;height:36px;border-radius:50%;background:rgba(23,19,16,.72);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;opacity:0;transform:scale(.7);transition:.3s}
+.gallery .g-item:hover::after{opacity:1;transform:scale(1)}
+.gallery .g-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gallery .g-item:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.gallery .g-item:hover img{transform:scale(1.08)}
+
+.review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;position:relative;transition:.3s;overflow:hidden}
+.review::before{content:"\201C";position:absolute;top:-6px;right:18px;font-family:var(--serif);font-size:88px;line-height:1;color:color-mix(in srgb,var(--accent) 14%,#fff);pointer-events:none}
+.review:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.review p{font-size:15.2px;color:var(--ink);margin:14px 0 18px;font-style:italic;position:relative}
+.review .rv-who{display:flex;align-items:center;gap:12px}
+.review .rv-av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 8px 16px color-mix(in srgb,var(--accent) 30%,transparent)}
+.review .rv-name{font-weight:700;font-size:14.5px}
+.review .rv-sub{color:var(--muted);font-size:12.5px}
+
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.offer{position:relative;background:linear-gradient(160deg,#fff,var(--gold-soft));border:1.5px dashed color-mix(in srgb,var(--gold) 55%,#fff);border-radius:18px;padding:30px 26px 26px;overflow:hidden;transition:.3s}
+.offer:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(201,154,58,.22)}
+.offer .tag{position:absolute;top:15px;right:-38px;transform:rotate(38deg);background:linear-gradient(135deg,var(--gold),#e3bc62);color:#3a2a0d;font-size:10.5px;font-weight:800;letter-spacing:1.5px;padding:5px 44px;text-transform:uppercase}
+.offer .o-ic{font-size:30px;margin-bottom:10px}
+.offer h4{font-family:var(--serif);font-size:21px;margin-bottom:8px}
+.offer p{font-size:14.5px;color:var(--muted)}
+
+.faq{max-width:780px;margin:0 auto;display:grid;gap:14px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:0 24px;transition:.3s;overflow:hidden}
+.faq details[open]{border-color:color-mix(in srgb,var(--accent) 42%,var(--line));box-shadow:var(--shadow)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:24px;color:var(--accent);transition:.3s;font-weight:400;line-height:1;flex-shrink:0}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .faq-a{padding:0 0 22px;color:var(--muted);font-size:15.2px}
+
+.cta-band{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:30px;padding:64px 48px;text-align:center;position:relative;overflow:hidden;box-shadow:0 30px 70px color-mix(in srgb,var(--accent) 35%,transparent)}
+.cta-band::before{content:"";position:absolute;top:-120px;left:-80px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.1);animation:bob 8s ease-in-out infinite}
+.cta-band::after{content:"";position:absolute;bottom:-140px;right:-70px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.07);animation:bob 10s ease-in-out infinite reverse}
+.cta-band h2{font-family:var(--serif);font-size:clamp(26px,3.6vw,40px);margin-bottom:14px;position:relative;z-index:1}
+.cta-band p{opacity:.92;max-width:560px;margin:0 auto 30px;position:relative;z-index:1;font-size:17px}
+.cta-band .btn{position:relative;z-index:1}
+.cta-band .btn:not(.btn-wa){background:#fff;color:var(--accent);box-shadow:0 14px 30px rgba(0,0,0,.22)}
+.cta-band .btn:not(.btn-wa):hover{transform:translateY(-3px)}
+.cta-band .hero-actions{justify-content:center}
+
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
+.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+.contact-row{display:flex;gap:15px;padding:15px 0;border-bottom:1px dashed var(--line);font-size:15px;transition:.2s}
+.contact-row:last-child{border-bottom:0}
+.contact-row:hover{transform:translateX(4px)}
+.contact-row .cr-ic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent-soft),var(--gold-soft));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-row b{display:block;font-size:12.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.7px}
+.map-box{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:320px;background:var(--accent-soft);box-shadow:var(--shadow)}
+
+footer.ft{background:#171310;color:#cfc7bd;padding:58px 0 34px;margin-top:20px;position:relative}
+footer.ft::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--gold),var(--accent))}
+.ft-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:34px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ft .brand{color:#fff}
+.ft .brand-mark{background:linear-gradient(135deg,var(--gold),#e3bc62);color:#171310;box-shadow:0 8px 18px rgba(201,154,58,.35)}
+.ft-desc{max-width:340px;font-size:14.5px;margin-top:14px;color:#a89f95}
+.ft-links{display:flex;gap:48px;flex-wrap:wrap}
+.ft-links h4{color:#fff;font-size:13.5px;margin-bottom:15px;letter-spacing:1px;text-transform:uppercase}
+.ft-links a{display:block;font-size:14px;margin-bottom:10px;color:#a89f95;transition:.2s}
+.ft-links a:hover{color:var(--gold);transform:translateX(4px)}
+.ft-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:26px;font-size:13px;color:#8d847a}
+.ft-bottom a{color:var(--gold)}
+
+.powered{position:fixed;right:16px;bottom:16px;z-index:90;background:#171310;color:#f3d594;font-size:12.5px;font-weight:600;padding:10px 17px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);display:flex;align-items:center;gap:7px;transition:.3s;border:1px solid rgba(243,213,148,.25)}
+.powered:hover{transform:translateY(-3px);color:#fff;border-color:rgba(255,255,255,.4)}
+.wa-float{position:fixed;left:16px;bottom:16px;z-index:90;width:58px;height:58px;border-radius:50%;background:#1fa855;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 12px 30px rgba(31,168,85,.5);transition:.3s;animation:pulsewa 2.4s ease-in-out infinite}
+.wa-float:hover{transform:scale(1.1)}
+@keyframes pulsewa{0%,100%{box-shadow:0 12px 30px rgba(31,168,85,.5),0 0 0 0 rgba(31,168,85,.4)}55%{box-shadow:0 12px 30px rgba(31,168,85,.5),0 0 0 16px rgba(31,168,85,0)}}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;background:rgba(23,19,16,.97);padding:11px 14px calc(11px + env(safe-area-inset-bottom));gap:11px;box-shadow:0 -10px 30px rgba(0,0,0,.35)}
+.mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:13px;font-weight:800;font-size:15px}
+.mbar .mb-call{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff}
+.mbar .mb-wa{background:#1fa855;color:#fff}
+
+#lb{position:fixed;inset:0;background:rgba(12,9,7,.94);display:none;align-items:center;justify-content:center;z-index:300;backdrop-filter:blur(8px);padding:24px}
+#lb.on{display:flex}
+#lb .lb-in{max-width:min(92vw,880px);max-height:84vh;border-radius:18px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.6);background:#241d18;display:flex;align-items:center;justify-content:center}
+#lb img{max-width:100%;max-height:84vh;object-fit:contain}
+#lb .lb-emoji{font-size:150px;padding:60px}
+#lb .lb-x{position:absolute;top:22px;right:26px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;border:0;font-size:22px;cursor:pointer;transition:.25s}
+#lb .lb-x:hover{background:rgba(255,255,255,.25);transform:rotate(90deg)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:920px){
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .offers{grid-template-columns:1fr 1fr}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:block}
+  .nav-in.open .nav-links{display:flex;position:absolute;top:74px;left:0;right:0;background:rgba(255,253,249,.98);flex-direction:column;padding:20px 24px;border-bottom:1px solid var(--line);gap:16px;box-shadow:0 20px 40px rgba(0,0,0,.12);font-size:16px}
+  header.nav.scrolled .nav-in.open .nav-links{background:rgba(23,19,16,.98);border-color:rgba(255,255,255,.1)}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:30px 16px}
+  .stat:nth-child(2)::after{display:none}
+}
+@media(max-width:600px){
+  .grid-4,.grid-3,.grid-2,.gallery,.offers{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .hero{padding:130px 0 78px;min-height:auto}
+  .cta-band{padding:44px 24px;border-radius:22px}
+  .mbar{display:flex}
+  .wa-float{display:none}
+  .powered{bottom:84px;right:12px}
+  .hero-meta{gap:10px}
+  .hero-actions .btn{width:100%;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-in" id="navIn">
+    <a href="#" class="brand"><span class="brand-mark">M</span>Madhuban Sweets &amp; Bakery</a>
+    <nav class="nav-links">
+        <a href="#about">About</a>
+  <a href="#menu">Sweets</a>
+  <a href="#gallery">Fresh</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+              <a class="btn btn-ghost" href="tel:+919031044521">Call Now</a>
+            <a class="btn btn-accent" href="#contact">Get in Touch</a>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-in">
+    <span class="eyebrow">&#127851; Patna&#39;s Sweet Sweets &amp; Bakery</span>
+    <h1>Madhuban Sweets &amp; Bakery <em>Sweet moments, baked fresh daily.</em></h1>
+    <p class="lead">Traditional mithai made with pure ghee, eggless cakes for every occasion and namkeen that goes perfectly with evening chai.</p>
+    <div class="hero-actions">
+              <a class="btn btn-accent" href="https://wa.me/919031044521?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+                    <a class="btn btn-ghost" href="tel:+919031044521">Call to Order</a>
+            <a class="btn btn-ghost" href="#menu">View Sweets</a>
+    </div>
+    <div class="hero-meta">
+            <div class="hm"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.7</b><span>2,150 Google reviews</span></div>
+                  <div class="hm">&#128337;<b>8:00 AM - 9:30 PM</b></div>
+                </div>
+    </div>
+      <div class="hero-collage" aria-hidden="true">
+                <div class="hc-card hc-0">
+          <span class="hc-emoji">🍮</span>        </div>
+                <div class="hc-card hc-1">
+          <span class="hc-emoji">🍰</span>        </div>
+                <div class="hc-card hc-2">
+          <span class="hc-emoji">🍦</span>        </div>
+                        <div class="hc-badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7</div>
+              </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+          <span class="tk">Madhuban Sweets &amp; Bakery</span>
+          <span class="tk">Sweets &amp; Bakery</span>
+          <span class="tk">Patna</span>
+          <span class="tk">★ 4.7</span>
+          <span class="tk">8:00 AM - 9:30 PM</span>
+          <span class="tk">Locally Loved</span>
+          <span class="tk">Madhuban Sweets &amp; Bakery</span>
+          <span class="tk">Sweets &amp; Bakery</span>
+          <span class="tk">Patna</span>
+          <span class="tk">★ 4.7</span>
+          <span class="tk">8:00 AM - 9:30 PM</span>
+          <span class="tk">Locally Loved</span>
+      </div>
+</div>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+            <div class="stat">
+        <div class="num" data-count="4.7" data-dec="1" data-suf="">4.7</div>
+        <div class="lab">Google Rating</div>
+      </div>
+            <div class="stat">
+        <div class="num" data-count="2150" data-dec="0" data-suf="+">2150+</div>
+        <div class="lab">Happy Reviews</div>
+      </div>
+            <div class="stat">
+        <div class="num" data-count="6" data-dec="0" data-suf="+">6+</div>
+        <div class="lab">Sweet Treats</div>
+      </div>
+            <div class="stat">
+        <div class="num" data-count="5" data-dec="0" data-suf="+">5+</div>
+        <div class="lab">Years of Trust</div>
+      </div>
+          </div>
+  </div>
+</section>
+
+<main>
+
+<section id="about" class="sec-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Why us</span>
+      <h2>Four decades of taste</h2>
+      <p>The same family recipe since 1985, prepared fresh every morning with pure ingredients and zero shortcuts.</p>
+    </div>
+    <div class="grid grid-4">
+            <div class="card">
+        <div class="ic">🔥</div>
+        <h3>Pure Ghee Only</h3>
+        <p>Every mithai is made in pure desi ghee, never vanaspati.</p>
+      </div>
+            <div class="card">
+        <div class="ic">🍰</div>
+        <h3>Fresh Daily</h3>
+        <p>Sweets and bakes are prepared fresh each morning, never stale.</p>
+      </div>
+            <div class="card">
+        <div class="ic">🚚</div>
+        <h3>Free Delivery</h3>
+        <p>Free home delivery in Patna on orders above Rs 500.</p>
+      </div>
+            <div class="card">
+        <div class="ic">🎁</div>
+        <h3>Bulk Orders</h3>
+        <p>Wedding, puja and corporate gift boxes made to order.</p>
+      </div>
+          </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Our Sweets</span>
+      <h2>Our Sweets &amp; Bakes</h2>
+      <p>Classic mithai, celebration cakes and namkeen, all at honest prices.</p>
+    </div>
+    <div class="menu-list" style="max-width:760px;margin:0 auto">
+            <div class="menu-item">
+        <div>
+          <div class="mi-name">Kaju Katli</div>
+          <div class="mi-desc">Cashew fudge with silver varq</div>        </div>
+        <div class="mi-dots"></div>
+        <div class="mi-price">₹1,100/kg</div>      </div>
+            <div class="menu-item">
+        <div>
+          <div class="mi-name">Motichoor Ladoo</div>
+          <div class="mi-desc">Fresh boondi ladoos in pure ghee</div>        </div>
+        <div class="mi-dots"></div>
+        <div class="mi-price">₹480/kg</div>      </div>
+            <div class="menu-item">
+        <div>
+          <div class="mi-name">Rasgulla (12 pcs)</div>
+          <div class="mi-desc">Soft spongy rasgullas in light syrup</div>        </div>
+        <div class="mi-dots"></div>
+        <div class="mi-price">₹240</div>      </div>
+            <div class="menu-item">
+        <div>
+          <div class="mi-name">Chocolate Truffle Cake</div>
+          <div class="mi-desc">Eggless 1 kg celebration cake</div>        </div>
+        <div class="mi-dots"></div>
+        <div class="mi-price">₹650</div>      </div>
+            <div class="menu-item">
+        <div>
+          <div class="mi-name">Khari Puff (500g)</div>
+          <div class="mi-desc">Buttery puff biscuits for chai time</div>        </div>
+        <div class="mi-dots"></div>
+        <div class="mi-price">₹180</div>      </div>
+            <div class="menu-item">
+        <div>
+          <div class="mi-name">Aloo Bhujia (500g)</div>
+          <div class="mi-desc">Crispy namkeen, fried in groundnut oil</div>        </div>
+        <div class="mi-dots"></div>
+        <div class="mi-price">₹150</div>      </div>
+          </div>
+  </div>
+</section>
+
+<section id="gallery" class="sec-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Fresh Batch</span>
+      <h2>Baked &amp; made today</h2>
+    </div>
+    <div class="gallery">
+            <div class="g-item">
+                  🍮
+              </div>
+            <div class="g-item">
+                  🍰
+              </div>
+            <div class="g-item">
+                  🍦
+              </div>
+            <div class="g-item">
+                  🍧
+              </div>
+            <div class="g-item">
+                  🧀
+              </div>
+            <div class="g-item">
+                  🍟
+              </div>
+          </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Reviews</span>
+      <h2>Sweet words from customers</h2>
+    </div>
+    <div class="grid grid-3">
+            <div class="review">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&quot;Our wedding sweets were from here. Guests would not stop asking where we got the kaju katli from.&quot;</p>
+        <div class="rv-who">
+          <div class="rv-av">A</div>
+          <div>
+            <div class="rv-name">Anjali Verma</div>
+            <div class="rv-sub">Sri Krishna Puri</div>
+          </div>
+        </div>
+      </div>
+            <div class="review">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&quot;Fresh khari and hot samosa every morning. Best bakery near Gandhi Maidan, hands down.&quot;</p>
+        <div class="rv-who">
+          <div class="rv-av">S</div>
+          <div>
+            <div class="rv-name">Sushant Raj</div>
+            <div class="rv-sub">Gandhi Maidan</div>
+          </div>
+        </div>
+      </div>
+            <div class="review">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&quot;Ordered an eggless chocolate cake at 8 pm for next day. Delivered on time and it tasted amazing.&quot;</p>
+        <div class="rv-who">
+          <div class="rv-av">N</div>
+          <div>
+            <div class="rv-name">Nida Fatima</div>
+            <div class="rv-sub">Kankarbagh</div>
+          </div>
+        </div>
+      </div>
+          </div>
+  </div>
+</section>
+
+</main>
+
+<section class="sec-alt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Offers</span>
+      <h2>Deals you will love</h2>
+      <p>Limited period offers, just for you.</p>
+    </div>
+    <div class="offers">
+            <div class="offer reveal">
+        <span class="tag">Festival</span>
+        <div class="o-ic">🎁</div>
+        <h4>Diwali Box Pre-Booking</h4>
+        <p>Pre-book festive mithai boxes and save 15 percent.</p>
+      </div>
+            <div class="offer reveal">
+        <span class="tag">Combo</span>
+        <div class="o-ic">🍟</div>
+        <h4>Chai Time Combo</h4>
+        <p>Khari plus namkeen 1 kg combo at Rs 299 only.</p>
+      </div>
+            <div class="offer reveal">
+        <span class="tag">Delivery</span>
+        <div class="o-ic">🚚</div>
+        <h4>Free Delivery</h4>
+        <p>Free home delivery on all orders above Rs 500.</p>
+      </div>
+          </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Frequently asked</h2>
+      <p>Everything you might want to know before you visit or order.</p>
+    </div>
+    <div class="faq">
+            <details class="reveal">
+        <summary>Do you take bulk wedding orders?</summary>
+        <div class="faq-a">Yes, book 3 days in advance on WhatsApp or call and we will prepare boxes in your budget.</div>
+      </details>
+            <details class="reveal">
+        <summary>Do you make eggless cakes?</summary>
+        <div class="faq-a">All our cakes are eggless by default. Custom photo cakes available with one day notice.</div>
+      </details>
+            <details class="reveal">
+        <summary>Is home delivery free?</summary>
+        <div class="faq-a">Free delivery above Rs 500 within Patna city. Outside city courier charges apply.</div>
+      </details>
+            <details class="reveal">
+        <summary>Do you use pure ghee?</summary>
+        <div class="faq-a">Yes, every mithai is made in pure desi ghee. No vanaspati, ever.</div>
+      </details>
+          </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Craving something sweet?</h2>
+      <p>Order on WhatsApp and get it delivered hot and fresh to your door.</p>
+      <div class="hero-actions">
+                  <a class="btn" href="tel:+919031044521">Call +91 90310 44521</a>
+                          <a class="btn btn-wa" href="https://wa.me/919031044521" target="_blank" rel="noopener">WhatsApp Us</a>
+              </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-alt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Find us</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+                <div class="contact-row"><div class="cr-ic">&#128205;</div><div><b>Address</b>Gandhi Maidan Road, Near Sri Krishna Puri, Patna 800001</div></div>
+                        <div class="contact-row"><div class="cr-ic">&#128222;</div><div><b>Phone</b><a href="tel:+919031044521">+91 90310 44521</a></div></div>
+                                <div class="contact-row"><div class="cr-ic">&#128337;</div><div><b>Hours</b>8:00 AM - 9:30 PM</div></div>
+                        <div class="contact-row"><div class="cr-ic">&#128506;</div><div><b>Directions</b><a href="https://www.google.com/maps?q=Gandhi+Maidan+Road+Patna&amp;output=embed" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Open in Google Maps</a></div></div>
+              </div>
+      <div class="map-box reveal">
+                  <iframe src="https://www.google.com/maps?q=Gandhi+Maidan+Road+Patna&amp;output=embed" style="width:100%;height:100%;min-height:320px;border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
+              </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="container">
+    <div class="ft-top">
+      <div>
+        <a href="#" class="brand"><span class="brand-mark">M</span>Madhuban Sweets &amp; Bakery</a>
+        <p class="ft-desc">Madhuban Sweets &amp; Bakery, Patna. Pure ghee mithai, fresh bakes and namkeen.</p>
+      </div>
+      <div class="ft-links">
+        <div>
+          <h4>Explore</h4>
+          <a href="#">Home</a>
+            <a href="#menu">Sweets</a>
+  <a href="#gallery">Fresh</a>
+  <a href="#reviews">Reviews</a>
+        </div>
+        <div>
+          <h4>Reach us</h4>
+          <a href="tel:+919031044521">+91 90310 44521</a>                    <a href="#contact">Patna</a>        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>&copy; 2026 Madhuban Sweets &amp; Bakery. All rights reserved.</span>
+              <span>Website crafted by <a href="https://blestide.online" target="_blank" rel="noopener">Blestide</a></span>
+          </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919031044521?text=Hi%2C%20I%20found%20you%20via%20your%20website." target="_blank" rel="noopener" aria-label="WhatsApp">&#128172;</a>
+<a class="powered" href="https://blestide.online" target="_blank" rel="noopener">&#9733; Made by Blestide</a>
+
+<div class="mbar">
+      <a class="mb-call" href="tel:+919031044521">&#128222; Call Now</a>
+        <a class="mb-wa" href="https://wa.me/919031044521" target="_blank" rel="noopener">&#128172; WhatsApp</a>
+  </div>
+
+<div id="lb"><button class="lb-x" id="lbX" aria-label="Close">&#10005;</button><div class="lb-in" id="lbIn"></div></div>
+
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Bakery","name":"Madhuban Sweets & Bakery","telephone":"+91 90310 44521","address":{"@type":"PostalAddress","streetAddress":"Gandhi Maidan Road, Near Sri Krishna Puri, Patna 800001","addressLocality":"Patna","addressRegion":"Bihar","addressCountry":"IN"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"2150","bestRating":"5"}}</script>
+<script>
+(function(){
+  var nav = document.getElementById('navIn');
+  var header = document.querySelector('header.nav');
+  var burger = document.getElementById('burgerBtn');
+  if (burger) burger.addEventListener('click', function(){ nav.classList.toggle('open'); });
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); });
+  });
+  function onScroll(){
+    if (window.scrollY > 30) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.sec-head, .card, .menu-item, .g-item, .review, .offer, .faq details, .contact-card, .cta-band, .contact-grid .map-box');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          var sibs = Array.prototype.slice.call(en.target.parentNode.children).filter(function(c){ return c.classList && c.classList.contains('reveal'); });
+          var i = Math.max(0, sibs.indexOf(en.target));
+          en.target.style.transitionDelay = Math.min(i * 70, 350) + 'ms';
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var nums = document.querySelectorAll('.num[data-count]');
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    var suf = el.getAttribute('data-suf') || '';
+    if (reduce || isNaN(target)) return;
+    var start = null, dur = 1500;
+    function step(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var ease = 1 - Math.pow(1 - p, 3);
+      var val = target * ease;
+      el.textContent = (dec ? val.toFixed(dec) : Math.round(val)) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window) {
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ animateCount(en.target); io2.unobserve(en.target); }
+      });
+    }, { threshold: 0.5 });
+    nums.forEach(function(n){ io2.observe(n); });
+  }
+
+  var lb = document.getElementById('lb');
+  var lbIn = document.getElementById('lbIn');
+  document.querySelectorAll('.gallery .g-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var img = item.querySelector('img');
+      lbIn.innerHTML = '';
+      if (img){
+        var c = document.createElement('img');
+        c.src = img.src; c.alt = img.alt || '';
+        lbIn.appendChild(c);
+      } else {
+        var e = document.createElement('div');
+        e.className = 'lb-emoji';
+        e.textContent = item.textContent.trim() || item.getAttribute('data-emoji') || '\u2B50';
+        lbIn.appendChild(e);
+      }
+      lb.classList.add('on');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeLb(){ lb.classList.remove('on'); document.body.style.overflow = ''; }
+  document.getElementById('lbX').addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
+})();
+</script>
+</body>
+</html>
