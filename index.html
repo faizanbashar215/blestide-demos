@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Website Demos - Blestide</title>
+<meta name="description" content="Explore ready-to-launch websites Blestide built for restaurants, salons, clinics, gyms, schools and more.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#6B0F1A;--gold:#C99A3A;--cream:#F5F0E8;--dark:#14100f;--muted:#6f665d;--font:'Inter',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:#fffdf9;color:var(--dark);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{max-width:1120px;margin:0 auto;padding:0 22px}
+.top{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid #eee5d8}
+.top-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.brand-mark{width:36px;height:36px;border-radius:10px;background:var(--maroon);color:#f3d594;display:flex;align-items:center;justify-content:center;font-weight:800}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:.25s}
+.btn-gold{background:linear-gradient(135deg,#e3b75c,#C99A3A 45%,#a87a2e);color:#240609}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(201,154,58,.4)}
+.btn-line{border:1.5px solid var(--maroon);color:var(--maroon);background:transparent}
+.hero{padding:80px 0 50px;text-align:center;background:linear-gradient(165deg,#fffdf9,#f5f0e8)}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--maroon);background:rgba(107,15,26,.08);padding:7px 16px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-size:clamp(30px,4.6vw,50px);letter-spacing:-1px;line-height:1.14;max-width:760px;margin:0 auto 16px}
+.hero h1 em{font-style:normal;color:var(--maroon)}
+.hero p{color:var(--muted);font-size:17px;max-width:620px;margin:0 auto}
+.gallery{padding:56px 0 80px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px}
+.chip{padding:9px 20px;border-radius:999px;border:1px solid #e6dccd;background:#fff;font-size:13.5px;font-weight:600;color:var(--muted);cursor:pointer;transition:.2s}
+.chip.on,.chip:hover{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dcard{background:#fff;border:1px solid #eee5d8;border-radius:18px;overflow:hidden;transition:.28s;display:flex;flex-direction:column}
+.dcard:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(20,16,15,.13);border-color:rgba(201,154,58,.5)}
+.dcard-top{height:130px;display:flex;align-items:center;justify-content:center;font-size:46px;position:relative}
+.dcard-top .ind{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;color:#240609}
+.dcard-body{padding:22px;flex:1;display:flex;flex-direction:column}
+.dcard-body h3{font-size:18.5px;margin-bottom:6px}
+.dcard-body .loc{font-size:13px;color:var(--muted);margin-bottom:10px}
+.dcard-body p{font-size:14.2px;color:var(--muted);flex:1}
+.dcard-act{display:flex;gap:10px;margin-top:16px}
+.dcard-act .btn{flex:1;justify-content:center;padding:11px 14px;font-size:13.5px}
+.empty{text-align:center;color:var(--muted);padding:70px 0}
+footer{background:#14100f;color:#a89f95;padding:36px 0;font-size:14px}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer a{color:#e3b75c}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="container top-in">
+    <a href="/" class="brand"><span class="brand-mark">B</span>Blestide</a>
+    <div style="display:flex;gap:10px">
+      <a class="btn btn-line" href="/products">Our Services</a>
+      <a class="btn btn-gold" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20these%20demos" target="_blank" rel="noopener">Get Yours</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Live Demo Websites</span>
+    <h1>See what your business could look like <em>online</em></h1>
+    <p>Real, ready-to-launch website designs for every industry. Pick a style, and we will personalize it with your business name, photos, and details.</p>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="filters" id="filters">
+      <button class="chip on" data-f="all">All</button>
+                  <button class="chip" data-f="clinic">Clinic</button>
+            <button class="chip" data-f="generic">Generic</button>
+            <button class="chip" data-f="gym">Gym</button>
+            <button class="chip" data-f="hotel">Hotel</button>
+            <button class="chip" data-f="restaurant">Restaurant</button>
+            <button class="chip" data-f="salon">Salon</button>
+            <button class="chip" data-f="school">School</button>
+          </div>
+
+        <div class="grid" id="grid">
+            <div class="dcard" data-ind="school">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #1D4ED822, #1D4ED8)">
+          <span style="filter:saturate(.9)">🎓</span>
+          <span class="ind">school</span>
+        </div>
+        <div class="dcard-body">
+          <h3>Bright Future Academy</h3>
+          <div class="loc">&#128205; Patna · Coaching Institute</div>
+          <p>Small batches, expert faculty, and a track record of selections.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./bright-future-academy.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20Bright%20Future%20Academy" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="restaurant">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #3B2A2022, #3B2A20)">
+          <span style="filter:saturate(.9)">🍲</span>
+          <span class="ind">restaurant</span>
+        </div>
+        <div class="dcard-body">
+          <h3>Cafe 13</h3>
+          <div class="loc">&#128205; Patna · Waffle &amp; Coffee Bar</div>
+          <p>Waffles, coffee and comfort food on Boring Road - Patna&#039;s favourite hangout.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./cafe-13.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20Cafe%2013" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="clinic">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #0E7C6622, #0E7C66)">
+          <span style="filter:saturate(.9)">🏧</span>
+          <span class="ind">clinic</span>
+        </div>
+        <div class="dcard-body">
+          <h3>City Care Clinic</h3>
+          <div class="loc">&#128205; Patna · Multi-Speciality Clinic</div>
+          <p>Experienced doctors, modern diagnostics, and gentle family care.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./city-care-clinic.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20City%20Care%20Clinic" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="hotel">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #123A5C22, #123A5C)">
+          <span style="filter:saturate(.9)">🏨</span>
+          <span class="ind">hotel</span>
+        </div>
+        <div class="dcard-body">
+          <h3>City Inn</h3>
+          <div class="loc">&#128205; Patna · Business Hotel</div>
+          <p>Comfortable stays on Bailey Road, minutes from IGIMS and Patna Junction.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./city-inn-bailey-road.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20City%20Inn" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="salon">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #A6236B22, #A6236B)">
+          <span style="filter:saturate(.9)">💄</span>
+          <span class="ind">salon</span>
+        </div>
+        <div class="dcard-body">
+          <h3>Glow Hair Studio</h3>
+          <div class="loc">&#128205; Patna · Salon &amp; Spa</div>
+          <p>Premium hair, skin and bridal services by trained stylists.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./glow-hair-studio.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20Glow%20Hair%20Studio" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="hotel">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #1E3A8A22, #1E3A8A)">
+          <span style="filter:saturate(.9)">🏨</span>
+          <span class="ind">hotel</span>
+        </div>
+        <div class="dcard-body">
+          <h3>Hotel Patna Inn</h3>
+          <div class="loc">&#128205; Patna · 3-Star Hotel</div>
+          <p>Clean rooms, warm hospitality, and a central location.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./hotel-patna-inn.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20Hotel%20Patna%20Inn" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="gym">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #C2410C22, #C2410C)">
+          <span style="filter:saturate(.9)">🏋</span>
+          <span class="ind">gym</span>
+        </div>
+        <div class="dcard-body">
+          <h3>Iron Fitness Gym</h3>
+          <div class="loc">&#128205; Patna · Fitness Centre</div>
+          <p>Certified trainers, modern equipment, and results you can measure.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./iron-fitness-gym.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20Iron%20Fitness%20Gym" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="restaurant">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #B3470022, #B34700)">
+          <span style="filter:saturate(.9)">🍲</span>
+          <span class="ind">restaurant</span>
+        </div>
+        <div class="dcard-body">
+          <h3>Saffron Kitchen</h3>
+          <div class="loc">&#128205; Patna · Family Restaurant</div>
+          <p>Authentic North Indian, Chinese &amp; Mughlai dishes served hot with a smile.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./saffron-kitchen.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20Saffron%20Kitchen" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+            <div class="dcard" data-ind="generic">
+        <div class="dcard-top" style="background:linear-gradient(135deg, #0F4C8122, #0F4C81)">
+          <span style="filter:saturate(.9)">📋</span>
+          <span class="ind">generic</span>
+        </div>
+        <div class="dcard-body">
+          <h3>Sharma &amp; Associates</h3>
+          <div class="loc">&#128205; Patna · CA &amp; Tax Consultancy</div>
+          <p>Income tax, GST, audit and business compliance handled end to end.</p>
+          <div class="dcard-act">
+            <a class="btn btn-gold" href="./sharma-consultants.html">View Demo</a>
+            <a class="btn btn-line" href="https://wa.me/918655191529?text=Hi%2C%20I%20want%20a%20website%20like%20Sharma%20%26%20Associates" target="_blank" rel="noopener">Get This</a>
+          </div>
+        </div>
+      </div>
+          </div>
+      </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>&copy; 2026 Blestide - Bashar&#39;s Online Bazaar Private Limited</span>
+    <span><a href="https://blestide.online">blestide.online</a> &middot; <a href="tel:+918655191529">+91 86551 91529</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('filters').addEventListener('click', function(e){
+  var b = e.target.closest('.chip'); if(!b) return;
+  document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('on')});
+  b.classList.add('on');
+  var f = b.dataset.f;
+  document.querySelectorAll('.dcard').forEach(function(card){
+    card.style.display = (f==='all' || card.dataset.ind===f) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
