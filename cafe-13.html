@@ -455,10 +455,13 @@ body.adv-dark .nav-cta::before{background:rgba(255,255,255,.2)}
 .adv-item.adv-off{display:none}
 .adv-item.adv-flash{animation:advflash 1.5s}
 @keyframes advflash{0%,100%{box-shadow:none}15%,55%{box-shadow:0 0 0 4px var(--gold),var(--shadow)}}
-.adv-medal{position:absolute;top:-12px;right:16px;background:linear-gradient(135deg,var(--gold),#e3bc62);color:#3a2a0d;font-weight:800;font-size:12.5px;padding:6px 13px;border-radius:999px;box-shadow:0 8px 18px rgba(201,154,58,.4);z-index:2;transform:rotate(3deg)}
+.adv-medal{position:absolute;top:-7px;right:-7px;background:linear-gradient(135deg,var(--gold),#e3bc62);color:#3a2a0d;font-weight:800;font-size:11px;padding:3px 9px;border-radius:999px;box-shadow:0 6px 14px rgba(201,154,58,.45);z-index:3;transform:rotate(-6deg);border:1.5px solid #fff}
 .adv-ihead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.adv-ic{width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,var(--accent-soft),var(--gold-soft));display:flex;align-items:center;justify-content:center;font-size:27px;flex-shrink:0}
-.adv-badges{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+.adv-ic{width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,var(--accent-soft),var(--gold-soft));display:flex;align-items:center;justify-content:center;font-size:27px;flex-shrink:0;position:relative}
+.adv-badges{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;align-items:center}
+.adv-namerow{display:flex;align-items:center;gap:8px}
+.adv-namerow .adv-iname{flex:1;min-width:0}
+.adv-namerow .b-chip{flex-shrink:0}
 .b-chip{font-size:11px;font-weight:800;letter-spacing:.4px;padding:4px 10px;border-radius:8px;display:inline-flex;align-items:center;gap:5px;text-transform:uppercase}
 .b-best{background:#fff2d8;color:#8a5a00;border:1px solid #f3ddb0}
 .b-chef{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff}
@@ -744,7 +747,7 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
   .adv-tools{flex-direction:column;align-items:stretch}
   .adv-search{min-width:0}
   .adv-tools .adv-tab{justify-content:center}
-  .adv-medal{top:-10px;right:10px;font-size:11.5px;padding:5px 11px}
+  .adv-medal{top:-6px;right:-6px;font-size:10px;padding:2px 7px}
   .adv-slide{padding:26px 22px;min-height:0}
   .adv-score .big{font-size:52px}
   .adv-cart-b{padding:16px 18px}
@@ -862,12 +865,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
           </div>
     <div class="adv-grid" id="advGrid">
                   <article class="adv-item card" data-i="0" data-name="Nutella Waffle" data-cat="Waffles" data-veg="1" data-price="249" data-rate="4.9" data-pop="9">
-        <span class="adv-medal">🥇 #1</span>        <div class="adv-ihead">
-          <div class="adv-ic">🥞</div>
+        <div class="adv-ihead">
+          <div class="adv-ic">🥞<span class="adv-medal">🥇 #1</span></div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>            <span class="b-chip b-best">&#9733; Bestseller</span>                        <span class="b-chip b-rate">&#9733; 4.9</span>          </div>
+            <span class="b-chip b-best">&#9733; Bestseller</span>                      </div>
         </div>
-        <div class="adv-iname">Nutella Waffle</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Nutella Waffle</div>
+          <span class="b-chip b-rate">&#9733; 4.9</span>        </div>
         <p class="adv-idesc">Belgian waffle, warm Nutella, strawberries</p>        <div class="adv-meta">
           <span>🌶 Mild</span>          <span>&#128293; 450 kcal</span>          <span>&#128194; Waffles</span>        </div>
         <div class="adv-price">
@@ -878,12 +883,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="1" data-name="Classic Cold Coffee" data-cat="Coffee" data-veg="1" data-price="169" data-rate="4.8" data-pop="8">
-        <span class="adv-medal">🥈 #2</span>        <div class="adv-ihead">
-          <div class="adv-ic">☕</div>
+        <div class="adv-ihead">
+          <div class="adv-ic">☕<span class="adv-medal">🥈 #2</span></div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>            <span class="b-chip b-best">&#9733; Bestseller</span>                        <span class="b-chip b-rate">&#9733; 4.8</span>          </div>
+            <span class="b-chip b-best">&#9733; Bestseller</span>                      </div>
         </div>
-        <div class="adv-iname">Classic Cold Coffee</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Classic Cold Coffee</div>
+          <span class="b-chip b-rate">&#9733; 4.8</span>        </div>
         <p class="adv-idesc">Thick, creamy, ice-blended</p>        <div class="adv-meta">
           <span>🌶 Mild</span>          <span>&#128293; 220 kcal</span>          <span>&#128194; Coffee</span>        </div>
         <div class="adv-price">
@@ -894,12 +901,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="2" data-name="Peri Peri Fries" data-cat="Snacks" data-veg="1" data-price="149" data-rate="4.6" data-pop="0">
-                <div class="adv-ihead">
+        <div class="adv-ihead">
           <div class="adv-ic">🍟</div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>                                    <span class="b-chip b-rate">&#9733; 4.6</span>          </div>
+                                  </div>
         </div>
-        <div class="adv-iname">Peri Peri Fries</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Peri Peri Fries</div>
+          <span class="b-chip b-rate">&#9733; 4.6</span>        </div>
         <p class="adv-idesc">Crispy fries with peri peri dust</p>        <div class="adv-meta">
           <span>🌶🌶🌶 Hot</span>          <span>&#128293; 320 kcal</span>          <span>&#128194; Snacks</span>        </div>
         <div class="adv-price">
@@ -910,12 +919,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="3" data-name="Cheese Burst Pizza" data-cat="Pizza" data-veg="1" data-price="299" data-rate="4.7" data-pop="0">
-                <div class="adv-ihead">
+        <div class="adv-ihead">
           <div class="adv-ic">🍕</div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>                        <span class="b-chip b-chef">&#127859; Chef's pick</span>            <span class="b-chip b-rate">&#9733; 4.7</span>          </div>
+                        <span class="b-chip b-chef">&#127859; Chef's pick</span>          </div>
         </div>
-        <div class="adv-iname">Cheese Burst Pizza</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Cheese Burst Pizza</div>
+          <span class="b-chip b-rate">&#9733; 4.7</span>        </div>
         <p class="adv-idesc">8 inch, loaded with cheese</p>        <div class="adv-meta">
           <span>🌶🌶 Spicy</span>          <span>&#128293; 700 kcal</span>          <span>&#128194; Pizza</span>        </div>
         <div class="adv-price">
@@ -926,12 +937,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="4" data-name="Cold Coffee Frappe" data-cat="Coffee" data-veg="1" data-price="199" data-rate="4.7" data-pop="0">
-                <div class="adv-ihead">
+        <div class="adv-ihead">
           <div class="adv-ic">🥤</div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>                                    <span class="b-chip b-rate">&#9733; 4.7</span>          </div>
+                                  </div>
         </div>
-        <div class="adv-iname">Cold Coffee Frappe</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Cold Coffee Frappe</div>
+          <span class="b-chip b-rate">&#9733; 4.7</span>        </div>
         <p class="adv-idesc">Coffee, ice cream, chocolate drizzle</p>        <div class="adv-meta">
           <span>🌶 Mild</span>          <span>&#128293; 280 kcal</span>          <span>&#128194; Coffee</span>        </div>
         <div class="adv-price">
@@ -942,12 +955,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="5" data-name="Choco Lava Cake" data-cat="Desserts" data-veg="1" data-price="129" data-rate="4.8" data-pop="7">
-        <span class="adv-medal">🥉 #3</span>        <div class="adv-ihead">
-          <div class="adv-ic">🍰</div>
+        <div class="adv-ihead">
+          <div class="adv-ic">🍰<span class="adv-medal">🥉 #3</span></div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>            <span class="b-chip b-best">&#9733; Bestseller</span>                        <span class="b-chip b-rate">&#9733; 4.8</span>          </div>
+            <span class="b-chip b-best">&#9733; Bestseller</span>                      </div>
         </div>
-        <div class="adv-iname">Choco Lava Cake</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Choco Lava Cake</div>
+          <span class="b-chip b-rate">&#9733; 4.8</span>        </div>
         <p class="adv-idesc">Molten centre, served warm</p>        <div class="adv-meta">
           <span>🌶 Mild</span>          <span>&#128293; 340 kcal</span>          <span>&#128194; Desserts</span>        </div>
         <div class="adv-price">

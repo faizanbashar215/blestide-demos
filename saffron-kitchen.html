@@ -455,10 +455,13 @@ body.adv-dark .nav-cta::before{background:rgba(255,255,255,.2)}
 .adv-item.adv-off{display:none}
 .adv-item.adv-flash{animation:advflash 1.5s}
 @keyframes advflash{0%,100%{box-shadow:none}15%,55%{box-shadow:0 0 0 4px var(--gold),var(--shadow)}}
-.adv-medal{position:absolute;top:-12px;right:16px;background:linear-gradient(135deg,var(--gold),#e3bc62);color:#3a2a0d;font-weight:800;font-size:12.5px;padding:6px 13px;border-radius:999px;box-shadow:0 8px 18px rgba(201,154,58,.4);z-index:2;transform:rotate(3deg)}
+.adv-medal{position:absolute;top:-7px;right:-7px;background:linear-gradient(135deg,var(--gold),#e3bc62);color:#3a2a0d;font-weight:800;font-size:11px;padding:3px 9px;border-radius:999px;box-shadow:0 6px 14px rgba(201,154,58,.45);z-index:3;transform:rotate(-6deg);border:1.5px solid #fff}
 .adv-ihead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.adv-ic{width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,var(--accent-soft),var(--gold-soft));display:flex;align-items:center;justify-content:center;font-size:27px;flex-shrink:0}
-.adv-badges{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+.adv-ic{width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,var(--accent-soft),var(--gold-soft));display:flex;align-items:center;justify-content:center;font-size:27px;flex-shrink:0;position:relative}
+.adv-badges{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;align-items:center}
+.adv-namerow{display:flex;align-items:center;gap:8px}
+.adv-namerow .adv-iname{flex:1;min-width:0}
+.adv-namerow .b-chip{flex-shrink:0}
 .b-chip{font-size:11px;font-weight:800;letter-spacing:.4px;padding:4px 10px;border-radius:8px;display:inline-flex;align-items:center;gap:5px;text-transform:uppercase}
 .b-best{background:#fff2d8;color:#8a5a00;border:1px solid #f3ddb0}
 .b-chef{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff}
@@ -744,7 +747,7 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
   .adv-tools{flex-direction:column;align-items:stretch}
   .adv-search{min-width:0}
   .adv-tools .adv-tab{justify-content:center}
-  .adv-medal{top:-10px;right:10px;font-size:11.5px;padding:5px 11px}
+  .adv-medal{top:-6px;right:-6px;font-size:10px;padding:2px 7px}
   .adv-slide{padding:26px 22px;min-height:0}
   .adv-score .big{font-size:52px}
   .adv-cart-b{padding:16px 18px}
@@ -860,12 +863,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
           </div>
     <div class="adv-grid" id="advGrid">
                   <article class="adv-item card" data-i="0" data-name="Paneer Butter Masala" data-cat="Main Course" data-veg="1" data-price="260" data-rate="4.8" data-pop="8">
-        <span class="adv-medal">🥈 #2</span>        <div class="adv-ihead">
-          <div class="adv-ic">🍲</div>
+        <div class="adv-ihead">
+          <div class="adv-ic">🍲<span class="adv-medal">🥈 #2</span></div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>            <span class="b-chip b-best">&#9733; Bestseller</span>                        <span class="b-chip b-rate">&#9733; 4.8</span>          </div>
+            <span class="b-chip b-best">&#9733; Bestseller</span>                      </div>
         </div>
-        <div class="adv-iname">Paneer Butter Masala</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Paneer Butter Masala</div>
+          <span class="b-chip b-rate">&#9733; 4.8</span>        </div>
         <p class="adv-idesc">Cottage cheese in silky tomato-butter gravy</p>        <div class="adv-meta">
           <span>🌶🌶 Spicy</span>          <span>&#128293; 520 kcal</span>          <span>&#128194; Main Course</span>        </div>
         <div class="adv-price">
@@ -876,12 +881,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="1" data-name="Chicken Biryani" data-cat="Main Course" data-veg="0" data-price="320" data-rate="4.9" data-pop="9">
-        <span class="adv-medal">🥇 #1</span>        <div class="adv-ihead">
-          <div class="adv-ic">🍚</div>
+        <div class="adv-ihead">
+          <div class="adv-ic">🍚<span class="adv-medal">🥇 #1</span></div>
           <div class="adv-badges">
-            <span class="adv-veg adv-non" title="Non-vegetarian"></span>            <span class="b-chip b-best">&#9733; Bestseller</span>            <span class="b-chip b-chef">&#127859; Chef's pick</span>            <span class="b-chip b-rate">&#9733; 4.9</span>          </div>
+            <span class="b-chip b-best">&#9733; Bestseller</span>            <span class="b-chip b-chef">&#127859; Chef's pick</span>          </div>
         </div>
-        <div class="adv-iname">Chicken Biryani</div>
+        <div class="adv-namerow">
+          <span class="adv-veg adv-non" title="Non-vegetarian"></span>          <div class="adv-iname">Chicken Biryani</div>
+          <span class="b-chip b-rate">&#9733; 4.9</span>        </div>
         <p class="adv-idesc">Long-grain rice layered with spiced chicken</p>        <div class="adv-meta">
           <span>🌶🌶🌶 Hot</span>          <span>&#128293; 640 kcal</span>          <span>&#128194; Main Course</span>        </div>
         <div class="adv-price">
@@ -892,12 +899,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="2" data-name="Tandoori Platter" data-cat="Starters" data-veg="0" data-price="390" data-rate="4.7" data-pop="0">
-                <div class="adv-ihead">
+        <div class="adv-ihead">
           <div class="adv-ic">🥗</div>
           <div class="adv-badges">
-            <span class="adv-veg adv-non" title="Non-vegetarian"></span>                                    <span class="b-chip b-rate">&#9733; 4.7</span>          </div>
+                                  </div>
         </div>
-        <div class="adv-iname">Tandoori Platter</div>
+        <div class="adv-namerow">
+          <span class="adv-veg adv-non" title="Non-vegetarian"></span>          <div class="adv-iname">Tandoori Platter</div>
+          <span class="b-chip b-rate">&#9733; 4.7</span>        </div>
         <p class="adv-idesc">Mixed kebabs from the live tandoor</p>        <div class="adv-meta">
           <span>🌶🌶🌶 Hot</span>          <span>&#128293; 580 kcal</span>          <span>&#128194; Starters</span>        </div>
         <div class="adv-price">
@@ -908,12 +917,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="3" data-name="Dal Makhani" data-cat="Main Course" data-veg="1" data-price="220" data-rate="4.6" data-pop="0">
-                <div class="adv-ihead">
+        <div class="adv-ihead">
           <div class="adv-ic">🍱</div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>                                    <span class="b-chip b-rate">&#9733; 4.6</span>          </div>
+                                  </div>
         </div>
-        <div class="adv-iname">Dal Makhani</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Dal Makhani</div>
+          <span class="b-chip b-rate">&#9733; 4.6</span>        </div>
         <p class="adv-idesc">Slow-cooked black lentils, 8 hours</p>        <div class="adv-meta">
           <span>🌶 Mild</span>          <span>&#128293; 420 kcal</span>          <span>&#128194; Main Course</span>        </div>
         <div class="adv-price">
@@ -924,12 +935,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="4" data-name="Chilli Garlic Noodles" data-cat="Starters" data-veg="1" data-price="190" data-rate="4.5" data-pop="0">
-                <div class="adv-ihead">
+        <div class="adv-ihead">
           <div class="adv-ic">🍜</div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>                                    <span class="b-chip b-rate">&#9733; 4.5</span>          </div>
+                                  </div>
         </div>
-        <div class="adv-iname">Chilli Garlic Noodles</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Chilli Garlic Noodles</div>
+          <span class="b-chip b-rate">&#9733; 4.5</span>        </div>
         <p class="adv-idesc">Wok-tossed with crunchy vegetables</p>        <div class="adv-meta">
           <span>🌶🌶🌶 Hot</span>          <span>&#128293; 380 kcal</span>          <span>&#128194; Starters</span>        </div>
         <div class="adv-price">
@@ -940,12 +953,14 @@ body.adv-dark .card::before{background:linear-gradient(150deg,rgba(255,255,255,.
         </div>
       </article>
                   <article class="adv-item card" data-i="5" data-name="Gulab Jamun (2 pc)" data-cat="Desserts" data-veg="1" data-price="120" data-rate="4.8" data-pop="7">
-        <span class="adv-medal">🥉 #3</span>        <div class="adv-ihead">
-          <div class="adv-ic">🥚</div>
+        <div class="adv-ihead">
+          <div class="adv-ic">🥚<span class="adv-medal">🥉 #3</span></div>
           <div class="adv-badges">
-            <span class="adv-veg " title="Vegetarian"></span>            <span class="b-chip b-best">&#9733; Bestseller</span>                        <span class="b-chip b-rate">&#9733; 4.8</span>          </div>
+            <span class="b-chip b-best">&#9733; Bestseller</span>                      </div>
         </div>
-        <div class="adv-iname">Gulab Jamun (2 pc)</div>
+        <div class="adv-namerow">
+          <span class="adv-veg " title="Vegetarian"></span>          <div class="adv-iname">Gulab Jamun (2 pc)</div>
+          <span class="b-chip b-rate">&#9733; 4.8</span>        </div>
         <p class="adv-idesc">Warm, soaked in cardamom syrup</p>        <div class="adv-meta">
           <span>🌶 Mild</span>          <span>&#128293; 300 kcal</span>          <span>&#128194; Desserts</span>        </div>
         <div class="adv-price">
